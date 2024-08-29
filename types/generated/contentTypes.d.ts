@@ -368,6 +368,7 @@ export interface ApiBlogPostBlogPost extends Schema.CollectionType {
     singularName: 'blog-post';
     pluralName: 'blog-posts';
     displayName: 'Blog Post';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -380,6 +381,8 @@ export interface ApiBlogPostBlogPost extends Schema.CollectionType {
           preset: 'toolbar';
         }
       >;
+    Title: Attribute.String;
+    Cover: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
